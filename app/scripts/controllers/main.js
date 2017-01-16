@@ -11,6 +11,8 @@
 
     ctrl.selectTab = selectTabFn;
 
+    ctrl.selectedPage = 0;
+
     function selectTabFn(tab) {
 
       ctrl.selectedTab = tab;
@@ -22,10 +24,11 @@
     }
 
     ctrl.calendario = loadFactory.getCalendario();
-    ctrl.calendario[0].avviso = "Garganta!";
+
+    ctrl.classifiche = loadFactory.getClassifiche();
     
 
-    console.log(ctrl.calendario);
+    console.log(ctrl.classifiche);
   }];
 
   MainCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams','loadFactory'];

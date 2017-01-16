@@ -22,37 +22,37 @@
                         <thead>
                             <tr>
                                 <th style="text-align:center">Iscritti</th>
-                                <th style="text-align:center">Partenti</th>
-                                <th style="text-align:center">Arrivati</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="text-align:center">{{gara.iscritti}}</td>
-                                <td style="text-align:center">{{gara.partenti}}</td>
-                                <td style="text-align:center">{{gara.arrivati}}</td>
-                            </tr>
-                        </tbody>
-                        <thead>
-                            <tr>
-                                <th style="text-align:center">Coeff. Sup.</th>
-                                <th style="text-align:center">Pioggia</th>
-                                <th style="text-align:center">P. Unico</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="text-align:center"><i class="fa fa-check" ng-if="gara.coeff_sup"></i><i class="fa fa-times" ng-if="!gara.coeff_sup"></i></td>
-                                <td style="text-align:center"><i class="fa fa-check" ng-if="gara.pioggia"></i><i class="fa fa-times" ng-if="!gara.pioggia"></i></td>
-                                <td style="text-align:center"><i class="fa fa-check" ng-if="gara.percorso_unico"></i><i class="fa fa-times" ng-if="!gara.percorso_unico"></i></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p ng-if="gara.avviso" style="color:red !important;">{{gara.avviso}}</p> 
-                </div>
-            </div>
-        </div>
-    </li>
+<th style="text-align:center">Partenti</th>
+<th style="text-align:center">Arrivati</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td style="text-align:center">{{gara.iscritti}}</td>
+<td style="text-align:center">{{gara.partenti}}</td>
+<td style="text-align:center">{{gara.arrivati}}</td>
+</tr>
+</tbody>
+<thead>
+    <tr>
+        <th style="text-align:center">Coeff. Sup.</th>
+<th style="text-align:center">Pioggia</th>
+<th style="text-align:center">P. Unico</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td style="text-align:center"><i class="fa fa-check" ng-if="gara.coeff_sup"></i><i class="fa fa-times" ng-if="!gara.coeff_sup"></i></td>
+<td style="text-align:center"><i class="fa fa-check" ng-if="gara.pioggia"></i><i class="fa fa-times" ng-if="!gara.pioggia"></i></td>
+<td style="text-align:center"><i class="fa fa-check" ng-if="gara.percorso_unico"></i><i class="fa fa-times" ng-if="!gara.percorso_unico"></i></td>
+</tr>
+</tbody>
+</table>
+<p ng-if="gara.avviso" class="text-danger">{{gara.avviso}}</p>
+</div>
+</div>
+</div>
+</li>
 
 
 </ul>
@@ -71,17 +71,28 @@
         <div class="panel-body">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
-                <li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===0}" ng-click="ctrl.selectTab(0)"><a data-toggle="tab">JUN</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===1}" ng-click="ctrl.selectTab(1)"><a data-toggle="tab">SEN1</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===2}" ng-click="ctrl.selectTab(2)"><a data-toggle="tab">SEN2</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===3}" ng-click="ctrl.selectTab(3)"><a data-toggle="tab">VET1</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===4}" ng-click="ctrl.selectTab(4)"><a data-toggle="tab">VET2</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===5}" ng-click="ctrl.selectTab(5)"><a data-toggle="tab">GEN1</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===6}" ng-click="ctrl.selectTab(6)"><a data-toggle="tab">GEN2</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===7}" ng-click="ctrl.selectTab(7)"><a data-toggle="tab">SGA</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===8}" ng-click="ctrl.selectTab(8)"><a data-toggle="tab">SGB</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===9}" ng-click="ctrl.selectTab(9)"><a data-toggle="tab">WOM1</a></li>
-<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===10}" ng-click="ctrl.selectTab(10)"><a data-toggle="tab">WOM2</a></li>
+                <li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===0}" ng-click="ctrl.selectTab(0)"><a data-toggle="tab" style="font-size:12px">JUN</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===1}" ng-click="ctrl.selectTab(1)"><a data-toggle="tab" style="font-size:12px">SEN1</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===2}" ng-click="ctrl.selectTab(2)"><a data-toggle="tab" style="font-size:12px">SEN2</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===3}" ng-click="ctrl.selectTab(3)"><a data-toggle="tab" style="font-size:12px">VET1</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===4}" ng-click="ctrl.selectTab(4)"><a data-toggle="tab" style="font-size:12px">VET2</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===5}" ng-click="ctrl.selectTab(5)"><a data-toggle="tab" style="font-size:12px">GEN1</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===6}" ng-click="ctrl.selectTab(6)"><a data-toggle="tab" style="font-size:12px">GEN2</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===7}" ng-click="ctrl.selectTab(7)"><a data-toggle="tab" style="font-size:12px">SGA</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===8}" ng-click="ctrl.selectTab(8)"><a data-toggle="tab" style="font-size:12px">SGB</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===9}" ng-click="ctrl.selectTab(9)"><a data-toggle="tab" style="font-size:12px">WOM1</a>
+</li>
+<li style="cursor:pointer" ng-class="{'active':ctrl.selectedTab===10}" ng-click="ctrl.selectTab(10)"><a data-toggle="tab" style="font-size:12px">WOM2</a>
+</li>
 
 </ul>
 
@@ -93,122 +104,331 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Pos</th>
-                        <th>Atleta</th>
-                        <th>Team</th>
-                        <th>Cat</th>
-                        <th>Punti</th>
-                        <th>N. Prove</th>
-                        <th>Bonus</th>
+                        <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_J | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
 
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===1}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_S1 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Otto</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===2}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_S2 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
 
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@mdo</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===3}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_V1 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
 
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===4}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_V2 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
 
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===1}">
-        <h4>SEN1</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===2}">
-        <h4>SEN2</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===3}">
-        <h4>VET1</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===4}">
-        <h4>VET2</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===5}">
-        <h4>GEN1</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===6}">
-        <h4>GEN2</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===7}">
-        <h4>SGA</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===8}">
-        <h4>SGB</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===9}">
-        <h4>WOM1</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane " ng-class="{'active':ctrl.selectedTab===10}">
-        <h4>WOM2</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===5}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_G1 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===6}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_G2 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===7}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_SGA | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===8}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_SGB | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===9}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_W1 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane " ng-class="{'active':ctrl.selectedTab===10}">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Pos</th>
+<th>Atleta</th>
+<th>Team</th>
+<th style="text-align:center">Cat</th>
+<th style="text-align:center">Punti</th>
+<th style="text-align:center">Prove</th>
+<th style="text-align:center">Bonus</th>
+</tr>
+</thead>
+<tbody>
+    <tr ng-repeat="atleta in ctrl.classifiche.granfondo.categorie.class_W2 | limitTo:15">
+        <td style="text-align:center">{{$index+1}}</td>
+<td>{{atleta.cognome}} {{atleta.nome}}</td>
+<td>{{atleta.team}}</td>
+<td style="text-align:center">{{atleta.categoria}}</td>
+<td style="text-align:center">{{atleta.tot_punti}}</td>
+<td style="text-align:center">{{atleta.num_prove}}</td>
+<td style="text-align:center">{{atleta.bonus}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<ul class="pagination">
+    <li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a href="">Previous</a></li>
+    <li class="paginate_button " aria-controls="dataTables-example" ng-repeat = "$index in (0,ctrl.classifiche.granfondo.categorie.class_W2.length / 15)" ng-class="{'active':$index%2===1}"><a href="" ng-model="">1</a></li>
+    <li class="paginate_button " aria-controls="dataTables-example" ng-class="{'active':$index%2===1}"><a href="">2</a></li>
+    <li class="paginate_button " aria-controls="dataTables-example" ng-class="{'active':$index%2===1}"><a href="">3</a></li>
+    <li class="paginate_button " aria-controls="dataTables-example" ng-class="{'active':$index%2===1}"><a href="">4</a></li>
+    <li class="paginate_button " aria-controls="dataTables-example" ng-class="{'active':$index%2===1}"><a href="">5</a></li>
+    <li class="paginate_button " aria-controls="dataTables-example" ng-class="{'active':$index%2===1}"><a href="">6</a></li>
+    <li class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="">Next</a></li>
+</ul>
 </div>
 </div>
 <!-- /.panel-body -->
