@@ -10,6 +10,7 @@
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
   <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.css" />
   <!-- endbower -->
   <!-- endbuild -->
@@ -28,21 +29,74 @@
 
   <!-- Add your site or application content here -->
   <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-<div class="navbar-header">
+<a class="navbar-brand" href="index.html">ACSI</a>
+<ul class="nav navbar-top-links navbar-right">
+  <li>
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+    Calendario <i class="fa fa-caret-down"></i>
+    </a></li>
 
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-  <a class="navbar-brand" href="index.html">ACSI</a>
-</div>
+  <li>
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+    GranFondo <i class="fa fa-caret-down"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-messages">
+      <li>
+        <a href="#">
+          <div>
+            <strong>Classifiche categoria</strong>
+          </div>
+          <div>Consulta le classifiche di categoria con i primi 30 atleti...</div>
+        </a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="#">
+          <div>
+            <strong>Classifiche team</strong>
+          </div>
+          <div>Consulta le classifiche di team con i primi 30 team...</div>
+        </a>
+      </li>
+
+    </ul>
+    <!-- /.dropdown-messages -->
+  </li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    MedioFondo <i class="fa fa-caret-down"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-messages">
+      <li>
+        <a href="#">
+          <div>
+            <strong>Classifiche categoria</strong>
+          </div>
+          <div>Consulta le classifiche di categoria con i primi 30 atleti...</div>
+        </a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="#">
+          <div>
+            <strong>Classifiche team</strong>
+          </div>
+          <div>Consulta le classifiche di team con i primi 30 team...</div>
+        </a>
+      </li>
+
+    </ul>
+    <!-- /.dropdown-messages -->
+  </li>
+
+  <!-- /.dropdown -->
+</ul>
 </nav>
 
+<div id="page-wrapper" style="min-height: 561px; margin:0px; padding: 25px;">
 
-<div class="container">
-  <div ui-view="content"></div>
+<div ui-view="content"></div>
+
 </div>
 
 <div class="footer">
@@ -78,13 +132,13 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+<script src="/bower_components/angular-i18n/angular-locale_it-it.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <!-- include: "type": "js", "files": ["scripts/modules/*.js"] -->
 <script src="/scripts/modules/app.js"></script>
-<script src="/scripts/modules/config.js"></script>
 <script src="/scripts/modules/route.js"></script>
 <!-- /include -->
 <!-- endbuild -->
@@ -95,6 +149,13 @@
 <!-- include: "type": "js", "files": ["scripts/controllers/*.js"] -->
 <script src="/scripts/controllers/about.js"></script>
 <script src="/scripts/controllers/main.js"></script>
+<!-- /include -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/factories.js -->
+
+<!-- include: "type": "js", "files": ["scripts/factories/*.js"] -->
+<script src="/scripts/factories/loadFactory.js"></script>
 <!-- /include -->
 <!-- endbuild -->
 

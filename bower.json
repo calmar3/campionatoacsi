@@ -11,7 +11,9 @@
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
     "angular-ui-router": "^0.3.2",
-    "metisMenu": "^2.6.1"
+    "components-font-awesome": "4.6.3",
+    "metisMenu": "^2.6.1",
+    "angular-i18n": "^1.6.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
