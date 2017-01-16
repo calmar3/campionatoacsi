@@ -1,11 +1,21 @@
-'use strict';
-/**
- * @ngdoc function
- * @name sbAdminApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the sbAdminApp
- */
-angular.module('sbAdminApp')
-  .controller('MainCtrl', function($scope,$position) {
-  });
+(function() {
+  'use strict';
+
+  var MainCtrl = ['$scope', '$rootScope', '$compile', '$state', '$stateParams', function($scope, $rootScope, $compile, $state, $stateParams) {
+
+    var ctrl = this;
+
+    ctrl.changeState = changeStateFn;
+
+    function changeStateFn(){
+      $state.go('about');
+    }
+
+
+  }];
+
+  MainCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams'];
+
+  angular.module('campionatoAcsi').controller('MainCtrl', MainCtrl);
+
+}());
