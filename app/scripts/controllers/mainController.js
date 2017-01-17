@@ -5,13 +5,13 @@
 
     var ctrl = this;
 
-    ctrl.changeState = changeStateFn;
-
     ctrl.selectedTab = 0;
 
     ctrl.selectTab = selectTabFn;
 
     ctrl.selectedPage = 0;
+
+    console.log("MainCtrl");
 
     function selectTabFn(tab) {
 
@@ -19,9 +19,6 @@
 
     }
 
-    function changeStateFn() {
-      $state.go('about');
-    }
 
     ctrl.calendario = loadFactory.getCalendario();
 
