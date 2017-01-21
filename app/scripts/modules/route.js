@@ -34,7 +34,7 @@
       },
       views: {
         'content@': {
-          templateUrl: "views/main.html",
+          templateUrl: "views/main2.html",
           controller: 'MainCtrl',
           controllerAs: 'ctrl'
         }
