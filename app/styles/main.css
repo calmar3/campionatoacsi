@@ -77,3 +77,20 @@ body {
 text-decoration: none;
 background-color: #eee;
 }
+
+.navbar-brand > img {
+    display: block;
+    max-height: 45px !important;
+}
+
+.navbar-brand {
+    padding: 7px 15px !important;
+}
+
+i.fa-check {
+  color: #1AA73F;
+}
+
+i.fa-times {
+  color: #D50036;
+}

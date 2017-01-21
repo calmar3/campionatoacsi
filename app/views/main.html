@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-12 col-md-12 col-xs-12">
+    <div class="col-lg-10 col-md-12 col-xs-12 col-lg-offset-1">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <i class="fa fa-calendar fa-fw" style="margin-right:5px;">
@@ -10,7 +10,7 @@
             <div class="panel-body " style="height:600px; overflow-y:scroll; width:100%;">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
-                        <table class="table rwd-table">
+                        <table class="table rwd-table table-sm">
                             <tr>
                                 <th>
                                     Nome Prova
@@ -54,16 +54,22 @@
                                     {{gara.arrivati}}
                                 </td>
                                 <td data-th="Coeff. Sup.">
-                                    <input ng-model="gara.coeff_sup" type="checkbox">
-                                    </input>
+                                    <i class="fa fa-check" ng-if="gara.coeff_sup">
+                                    </i>
+                                    <i class="fa fa-times" ng-if="!gara.coeff_sup">
+                                    </i>
                                 </td>
                                 <td data-th="Pioggia">
-                                    <input ng-model="gara.pioggia" type="checkbox">
-                                    </input>
+                                    <i class="fa fa-check" ng-if="gara.pioggia">
+                                    </i>
+                                    <i class="fa fa-times" ng-if="!gara.pioggia">
+                                    </i>
                                 </td>
                                 <td data-th="Perc. Unico">
-                                    <input ng-model="gara.percorso_unico" type="checkbox">
-                                    </input>
+                                    <i class="fa fa-check" ng-if="gara.percorso_unico">
+                                    </i>
+                                    <i class="fa fa-times" ng-if="!gara.percorso_unico">
+                                    </i>
                                 </td>
                             </tr>
                         </table>

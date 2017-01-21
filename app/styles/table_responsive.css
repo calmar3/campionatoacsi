@@ -26,9 +26,11 @@
     @media (min-width: 750px) {
       .rwd-table th, .rwd-table td {
         display: table-cell;
-        padding: .25em .5em; }
+        padding: .25em .5em;
+        text-align: center; }
         .rwd-table th:first-child, .rwd-table td:first-child {
-          padding-left: 0; }
+          padding-left: 0;
+          text-align: left; }
         .rwd-table th:last-child, .rwd-table td:last-child {
           padding-right: 0; } }
 
@@ -45,4 +47,5 @@
       .rwd-table th, .rwd-table td {
         padding: 1em !important; } }
   .rwd-table th, .rwd-table td:before {
-    /**color: #dd5;**/ }
+    /**color: #dd5;**/ 
+  }
