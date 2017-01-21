@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var NavbarCtrl = ['$scope', '$rootScope', '$compile', '$state', '$stateParams','loadFactory', function ($scope, $rootScope, $compile, $state, $stateParams,loadFactory) {
+  var NavbarCtrl = ['$scope', '$rootScope', '$compile', '$state', '$stateParams', 'loadFactory', function ($scope, $rootScope, $compile, $state, $stateParams, loadFactory) {
 
     var ctrl = this;
 
@@ -9,23 +9,28 @@
 
     ctrl.init = initFn;
 
-    function initFn(){
-      console.log("initfn")
+    function initFn() {
+
       loadFactory.load();
     }
 
-    function changeStateFn(newstate,param) {
-      if (param === null)
+    function changeStateFn(newstate, param) {
+
+      if (newstate === 'home') {
         $state.go(newstate);
-      else
-        $state.go(newstate,{clt:param});
+      }
+      else {
+        loadFactory.setClassifiche(newstate,param)
+        $state.go(newstate);
+      }
+
 
     }
 
 
   }];
 
-  NavbarCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams','loadFactory'];
+  NavbarCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams', 'loadFactory'];
 
   angular.module('campionatoAcsi').controller('NavbarCtrl', NavbarCtrl);
 
