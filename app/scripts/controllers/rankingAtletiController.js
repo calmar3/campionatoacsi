@@ -13,8 +13,13 @@
 
     ctrl.campionato = loadFactory.getClassifiche();
 
-    console.log(ctrl.campionato);
-    
+    if (Object.keys(ctrl.campionato).length === 0 && ctrl.campionato.constructor === Object){
+
+      loadFactory.setClassifiche($state.current.name,"categorie");
+      ctrl.campionato = loadFactory.getClassifiche();
+
+    }
+
     ctrl.classifiche = ctrl.campionato.clas;
 
     ctrl.nomeCampionato = ctrl.campionato.nome;
