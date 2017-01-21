@@ -5,27 +5,8 @@
 
     var ctrl = this;
 
-    ctrl.selectedTab = 0;
-
-    ctrl.selectTab = selectTabFn;
-
-    ctrl.selectedPage = 0;
-
-    console.log("MainCtrl");
-
-    function selectTabFn(tab) {
-
-      ctrl.selectedTab = tab;
-
-    }
-
-
     ctrl.calendario = loadFactory.getCalendario();
-
-    ctrl.classifiche = loadFactory.getClassifiche();
     
-
-    console.log(ctrl.classifiche);
   }];
 
   MainCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams','loadFactory'];

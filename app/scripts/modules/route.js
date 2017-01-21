@@ -6,13 +6,9 @@
 
   routingConf.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  runfunction.$inject = ['$rootScope', '$state', '$stateParams'];
+  runfunction.$inject = ['$rootScope'];
 
-  function authorizationfunction(authorizationFact) {
-    return authorizationFact.authorize();
-  }
-
-  function runfunction($rootScope, $state, $stateParams) {
+  function runfunction($rootScope) {
     $rootScope.$on('$stateChangeStart', function (event, toState, toStateParams) {
       $rootScope.toState = toState;
       $rootScope.toStateParams = toStateParams;
@@ -42,21 +38,57 @@
       params: {
         home: true
       }
-    }).state('about', {
+    }).state('mediofondo', {
       parent: 'site',
-      url: '/about',
+      url: '/mediofondo',
       data: {
         roles: []
       },
       views: {
         'content@': {
-          templateUrl: "views/about.html",
-          controller: 'AboutCtrl',
+          templateUrl: "views/rankingAtleti.html",
+          controller: 'rankingAtletiCtrl',
           controllerAs: 'ctrl'
         }
+      }
+    }).state('granfondo', {
+      parent: 'site',
+      url: '/granfondo',
+      data: {
+        roles: []
       },
-      params: {
-        home: true
+      views: {
+        'content@': {
+          templateUrl: "views/rankingAtleti.html",
+          controller: 'rankingAtletiCtrl',
+          controllerAs: 'ctrl'
+        }
+      }
+    }).state('granfondoteam', {
+      parent: 'site',
+      url: '/granfondoteam',
+      data: {
+        roles: []
+      },
+      views: {
+        'content@': {
+          templateUrl: "views/rankingTeam.html",
+          controller: 'rankingTeamCtrl',
+          controllerAs: 'ctrl'
+        }
+      }
+    }).state('mediofondoteam', {
+      parent: 'site',
+      url: '/mediofondoteam',
+      data: {
+        roles: []
+      },
+      views: {
+        'content@': {
+          templateUrl: "views/rankingTeam.html",
+          controller: 'rankingTeamCtrl',
+          controllerAs: 'ctrl'
+        }
       }
     });
 
