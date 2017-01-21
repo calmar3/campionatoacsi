@@ -78,9 +78,18 @@ text-decoration: none;
 background-color: #eee;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
 .navbar-brand > img {
     display: block;
     max-height: 45px !important;
+}
+
+@media (max-width: 900px) {
+  .navbar-brand > img {
+    max-height: 40px !important;
+}
 }
 
 .navbar-brand {

@@ -5,13 +5,19 @@
 
     var ctrl = this;
 
+    
+
     ctrl.selectedTab = 0;
 
     ctrl.selectTab = selectTabFn;
 
-    ctrl.classifiche = loadFactory.getClassifiche();
+    ctrl.campionato = loadFactory.getClassifiche();
+    ctrl.classifiche = ctrl.campionato.clas;
 
-    console.log(ctrl.classifiche);
+    ctrl.nomeCampionato = ctrl.campionato.nome;
+
+    // console.log(ctrl.classifiche);
+    // console.log($state);
 
     function selectTabFn(tab) {
 

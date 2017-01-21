@@ -15,7 +15,7 @@
 
       dataFactory.getClassifiche = getClassificheFn;
 
-      dataFactory.classifiche = [];
+      dataFactory.classifiche = {};
 
       dataFactory.setClassifiche = setClassificheFn;
 
@@ -33,7 +33,8 @@ dataFactory.data = {"calendario":[{"nome":"GF CASSANI","data":"2016-04-03","camp
         for (var i = 0 ; i < dataFactory.data.classifiche.length ; i++){
           console.log(dataFactory.data.classifiche[i])
           if (dataFactory.data.classifiche[i].campionato === campionato){
-            dataFactory.classifiche = dataFactory.data.classifiche[i][tipo];
+            dataFactory.classifiche.clas = dataFactory.data.classifiche[i][tipo];
+            dataFactory.classifiche.nome = dataFactory.data.classifiche[i].campionato;
             break; 
           }
         }
