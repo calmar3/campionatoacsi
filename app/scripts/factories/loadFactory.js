@@ -31,7 +31,6 @@ dataFactory.data = {"calendario":[{"nome":"GF CASSANI","data":"2016-04-03","camp
 
       function setClassificheFn(campionato, tipo){
         for (var i = 0 ; i < dataFactory.data.classifiche.length ; i++){
-          console.log(dataFactory.data.classifiche[i])
           if (dataFactory.data.classifiche[i].campionato === campionato){
             dataFactory.classifiche.clas = dataFactory.data.classifiche[i][tipo];
             dataFactory.classifiche.nome = dataFactory.data.classifiche[i].campionato;

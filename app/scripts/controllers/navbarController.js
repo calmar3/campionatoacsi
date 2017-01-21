@@ -9,8 +9,10 @@
 
     ctrl.init = initFn;
 
-    function initFn() {
+    console.log("navbarlctrl")
 
+    function initFn() {
+      console.log("init")
       loadFactory.load();
     }
 

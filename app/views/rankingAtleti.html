@@ -51,7 +51,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="atleta in ctrl.classifiche[ctrl.selectedTab].classifica ">
+                                    <tr ng-repeat="atleta in ctrl.classifiche[ctrl.selectedTab].classifica " ng-click="ctrl.selezionaPiazzamenti($index)">
                                         <td style="text-align:center">
                                             {{$index+1}}
                                         </td>
@@ -79,6 +79,50 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+        <div class="col-lg-5 col-md-5 col-xs-12" ng-show="ctrl.piazzamenti">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <i class="fa fa-clock-o fa-fw">
+                </i>
+                Dettaglio Piazzamenti: {{ctrl.piazzamenti.atleta}}
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th >
+                                            Nome Prova
+                                        </th>
+                                        <th style="text-align:center">
+                                            Posizione
+                                        </th>
+                                        <th style="text-align:center">
+                                            Punti
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="piazzamento in ctrl.piazzamenti.gare " ng-class="{'danger':piazzamento.is_migliore===false}">
+                                        <td >
+                                            {{piazzamento.nomeprova}}
+                                        </td>
+                                        <td style="text-align:center">
+                                            {{piazzamento.posizione}}
+                                        </td>
+                                        <td style="text-align:center">
+                                            {{piazzamento.punteggio}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+ 
             </div>
         </div>
     </div>

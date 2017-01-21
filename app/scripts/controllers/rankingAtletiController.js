@@ -12,13 +12,22 @@
     ctrl.selectTab = selectTabFn;
 
     ctrl.campionato = loadFactory.getClassifiche();
+
+    console.log(ctrl.campionato);
+    
     ctrl.classifiche = ctrl.campionato.clas;
 
     ctrl.nomeCampionato = ctrl.campionato.nome;
 
-    // console.log(ctrl.classifiche);
-    // console.log($state);
+    ctrl.selezionaPiazzamenti = selezionaPiazzamentiFn;
 
+    function selezionaPiazzamentiFn(index){
+
+      ctrl.piazzamenti = {};
+      ctrl.piazzamenti.gare = ctrl.classifiche[ctrl.selectedTab].classifica[index].piazzamenti;
+      ctrl.piazzamenti.atleta = ctrl.classifiche[ctrl.selectedTab].classifica[index].cognome + " " + ctrl.classifiche[ctrl.selectedTab].classifica[index].nome;
+
+    }
     function selectTabFn(tab) {
 
       ctrl.selectedTab = tab;
