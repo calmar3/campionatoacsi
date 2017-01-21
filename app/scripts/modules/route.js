@@ -30,7 +30,7 @@
       },
       views: {
         'content@': {
-          templateUrl: "views/main2.html",
+          templateUrl: "views/main.html",
           controller: 'MainCtrl',
           controllerAs: 'ctrl'
         }
