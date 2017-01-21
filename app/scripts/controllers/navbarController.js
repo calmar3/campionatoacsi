@@ -19,8 +19,11 @@
       if (newstate === 'home') {
         $state.go(newstate);
       }
+
       else {
-        loadFactory.setClassifiche(newstate,param)
+        loadFactory.setClassifiche(newstate,param);
+        if (param === 'societa')
+          newstate = newstate + 'team';
         $state.go(newstate);
       }
 

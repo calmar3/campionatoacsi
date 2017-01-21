@@ -5,7 +5,13 @@
 
     var ctrl = this;
 
-    ctrl.calendario = loadFactory.getCalendario();
+    $scope.$watch(function () {
+      return loadFactory.getCalendario();
+    }, function (res) {
+      ctrl.calendario = res;
+    });
+
+    // ctrl.calendario = loadFactory.getCalendario();
     
   }];
 

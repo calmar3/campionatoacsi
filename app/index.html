@@ -1,79 +1,125 @@
-<!doctype html>
+<!DOCTYPE doctype html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(.) styles/vendor.css -->
-  <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
-  <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.css" />
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/table_responsive.css">
-  <link rel="stylesheet" href="styles/sb-admin-2.css">
-  <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css">
-  <!-- endbuild -->
-</head>
-
-<body ng-app="campionatoAcsi" ng-controller="NavbarCtrl as ctrl" ng-init="ctrl.init()">
-
-
-  <!-- Add your site or application content here -->
-
-   <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="" ng-click="ctrl.changeState('home')"><img src="images/logo_ciclismo_web.png" alt="ACSI Ciclismo">
-        </a>
+    <head>
+        <meta charset="utf-8">
+            <title>
+            </title>
+            <meta content="" name="description">
+                <meta content="width=device-width" name="viewport">
+                    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+                    <!-- build:css(.) styles/vendor.css -->
+                    <!-- bower:css -->
+                    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+                    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+                    <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.css" />
+                    <!-- endbower -->
+                    <!-- endbuild -->
+                    <!-- build:css(.tmp) styles/main.css -->
+                    <link href="styles/main.css" rel="stylesheet">
+                        <link href="styles/table_responsive.css" rel="stylesheet">
+                            <link href="styles/sb-admin-2.css" rel="stylesheet">
+                                <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+                                    <!-- endbuild -->
+                                </link>
+                            </link>
+                        </link>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body ng-app="campionatoAcsi" ng-controller="NavbarCtrl as ctrl" ng-init="ctrl.init()">
+        <!-- Add your site or application content here -->
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-target="#navbar3" data-toggle="collapse" type="button">
+                        <span class="sr-only">
+                            Toggle navigation
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a class="navbar-brand" href="" ng-click="ctrl.changeState('home')">
+                        <img alt="ACSI Ciclismo" src="images/logo_ciclismo_web.png">
+                        </img>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar3">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="uppercase" href="" ng-click="ctrl.changeState('home')">
+                                Calendario
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="" role="button">
+                                Granfondo
+                                <span class="caret">
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="" ng-click="ctrl.changeState('granfondo','categorie')">
+                                        Atleti
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" ng-click="ctrl.changeState('granfondo','societa')">
+                                        Team
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="" role="button">
+                                Mediofondo
+                                <span class="caret">
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="" ng-click="ctrl.changeState('mediofondo','categorie')">
+                                        Atleti
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" ng-click="ctrl.changeState('mediofondo','societa')">
+                                        Team
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="hidden-sm hidden-xs lead navbar-left navbar-text titolo-navbar">
+                        Campionato Nazionale GF-MF
+                    </p>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+        <div id="page-wrapper" style="min-height: 561px; margin:0px; padding: 25px;">
+            <div ui-view="content">
+            </div>
         </div>
-        <div id="navbar3" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li >
-              <a href="" ng-click="ctrl.changeState('home')" class="uppercase">Calendario</a>
-            </li>
-            <li>
-              <a href="" ng-click="ctrl.changeState('granfondo','categorie')" class="uppercase">Granfondo</a>
-            </li>
-            <li>
-              <a href="" ng-click="ctrl.changeState('mediofondo','categorie')" class="uppercase">Mediofondo</a>
-            </li>
-          </ul>
-          <p class="hidden-sm hidden-xs lead navbar-left navbar-text titolo-navbar">Campionato Nazionale GF-MF</p>
+        <div class="footer">
+            <div class="container">
+                <p>
+                    Antonio Schiazza
+                    <br>
+                        Marco Calzetta
+                    </br>
+                </p>
+            </div>
         </div>
-        <!--/.nav-collapse -->
-      </div>
-      <!--/.container-fluid -->
-    </nav>
-
-<div id="page-wrapper" style="min-height: 561px; margin:0px; padding: 25px;">
-
-<div ui-view="content"></div>
-
-</div>
-
-<div class="footer">
-  <div class="container">
-    <p>Antonio Schiazza<br>Marco Calzetta</p>
-  </div>
-</div>
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-  !function (A, n, g, u, l, a, r) {
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <script>
+            !function (A, n, g, u, l, a, r) {
     A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
       (A[l].q = A[l].q || []).push(arguments)
     }, A[l].l = +new Date, a = n.createElement(g),
@@ -82,59 +128,57 @@
 
   ga('create', 'UA-XXXXX-X');
   ga('send', 'pageview');
-</script>
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/metisMenu/dist/metisMenu.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<!-- include: "type": "js", "files": ["scripts/modules/*.js"] -->
-<script src="/scripts/modules/app.js"></script>
-<script src="/scripts/modules/route.js"></script>
-<!-- /include -->
-<!-- endbuild -->
-
-
-<!-- build:js({.tmp,app}) scripts/controllers.js -->
-
-<!-- include: "type": "js", "files": ["scripts/controllers/*.js"] -->
-<script src="/scripts/controllers/rankingAtletiController.js"></script>
-<script src="/scripts/controllers/rankingTeamController.js"></script>
-<script src="/scripts/controllers/mainController.js"></script>
-<script src="/scripts/controllers/navbarController.js"></script>
-<!-- /include -->
-<!-- endbuild -->
-
-<!-- build:js({.tmp,app}) scripts/factories.js -->
-
-<!-- include: "type": "js", "files": ["scripts/factories/*.js"] -->
-<script src="/scripts/factories/loadFactory.js"></script>
-<!-- /include -->
-<!-- endbuild -->
-
-
-<!-- build:js({.tmp,app}) scripts/others.js -->
-<!-- include: "type": "js", "files": ["scripts/others/*.js"] -->
-<script src="/scripts/others/sb-admin-2.js"></script>
-<!-- /include -->
-<!-- endbuild -->
-
-</body>
-
-<link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
-<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
-
+        </script>
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <!-- include: "type": "js", "files": ["scripts/modules/*.js"] -->
+        <script src="/scripts/modules/app.js">
+        </script>
+        <script src="/scripts/modules/route.js">
+        </script>
+        <!-- /include -->
+        <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/controllers.js -->
+        <!-- include: "type": "js", "files": ["scripts/controllers/*.js"] -->
+        <script src="/scripts/controllers/rankingAtletiController.js">
+        </script>
+        <script src="/scripts/controllers/rankingTeamController.js">
+        </script>
+        <script src="/scripts/controllers/mainController.js">
+        </script>
+        <script src="/scripts/controllers/navbarController.js">
+        </script>
+        <!-- /include -->
+        <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/factories.js -->
+        <!-- include: "type": "js", "files": ["scripts/factories/*.js"] -->
+        <script src="/scripts/factories/loadFactory.js">
+        </script>
+        <!-- /include -->
+        <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/others.js -->
+        <!-- include: "type": "js", "files": ["scripts/others/*.js"] -->
+        <script src="/scripts/others/sb-admin-2.js">
+        </script>
+        <!-- /include -->
+        <!-- endbuild -->
+    </body>
+    <link ;="" href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js">
+        </script>
+    </link>
 </html>

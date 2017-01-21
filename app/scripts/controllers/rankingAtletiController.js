@@ -1,48 +1,36 @@
-(function () {
-  'use strict';
+(function() {
+    'use strict';
+    var rankingAtletiCtrl = ['$scope', '$rootScope', '$compile', '$state', '$stateParams', 'loadFactory', function($scope, $rootScope, $compile, $state, $stateParams, loadFactory) {
+        var ctrl = this;
+        ctrl.selectedTab = 0;
+        ctrl.selectTab = selectTabFn;
+        
+        $scope.$watch(function() {
+            return loadFactory.data;
+        }, function(res) {
+            if (Object.keys(loadFactory.classifiche).length === 0 && loadFactory.classifiche.constructor === Object) {
+       
+                loadFactory.setClassifiche($state.current.name, "categorie");
+                
+            }
 
-  var rankingAtletiCtrl = ['$scope', '$rootScope', '$compile', '$state', '$stateParams','loadFactory', function ($scope, $rootScope, $compile, $state, $stateParams,loadFactory) {
+            ctrl.campionato = loadFactory.getClassifiche();
+            ctrl.classifiche = ctrl.campionato.clas;
+            ctrl.nomeCampionato = ctrl.campionato.nome;
+        });
+        // ctrl.campionato = loadFactory.getClassifiche();
+        ctrl.selezionaPiazzamenti = selezionaPiazzamentiFn;
 
-    var ctrl = this;
+        function selezionaPiazzamentiFn(index) {
+            ctrl.piazzamenti = {};
+            ctrl.piazzamenti.gare = ctrl.classifiche[ctrl.selectedTab].classifica[index].piazzamenti;
+            ctrl.piazzamenti.atleta = ctrl.classifiche[ctrl.selectedTab].classifica[index].cognome + " " + ctrl.classifiche[ctrl.selectedTab].classifica[index].nome;
+        }
 
-    
-
-    ctrl.selectedTab = 0;
-
-    ctrl.selectTab = selectTabFn;
-
-    ctrl.campionato = loadFactory.getClassifiche();
-
-    if (Object.keys(ctrl.campionato).length === 0 && ctrl.campionato.constructor === Object){
-
-      loadFactory.setClassifiche($state.current.name,"categorie");
-      ctrl.campionato = loadFactory.getClassifiche();
-
-    }
-
-    ctrl.classifiche = ctrl.campionato.clas;
-
-    ctrl.nomeCampionato = ctrl.campionato.nome;
-
-    ctrl.selezionaPiazzamenti = selezionaPiazzamentiFn;
-
-    function selezionaPiazzamentiFn(index){
-
-      ctrl.piazzamenti = {};
-      ctrl.piazzamenti.gare = ctrl.classifiche[ctrl.selectedTab].classifica[index].piazzamenti;
-      ctrl.piazzamenti.atleta = ctrl.classifiche[ctrl.selectedTab].classifica[index].cognome + " " + ctrl.classifiche[ctrl.selectedTab].classifica[index].nome;
-
-    }
-    function selectTabFn(tab) {
-
-      ctrl.selectedTab = tab;
-
-    }
-
-  }];
-
-  rankingAtletiCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams','loadFactory'];
-
-  angular.module('campionatoAcsi').controller('rankingAtletiCtrl', rankingAtletiCtrl);
-
-} ());
+        function selectTabFn(tab) {
+            ctrl.selectedTab = tab;
+        }
+    }];
+    rankingAtletiCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams', 'loadFactory'];
+    angular.module('campionatoAcsi').controller('rankingAtletiCtrl', rankingAtletiCtrl);
+}());
