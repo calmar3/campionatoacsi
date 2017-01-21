@@ -42,21 +42,18 @@
       params: {
         home: true
       }
-    }).state('about', {
+    }).state('classifiche', {
       parent: 'site',
-      url: '/about',
+      url: '/classifiche?:clt',
       data: {
         roles: []
       },
       views: {
         'content@': {
-          templateUrl: "views/about.html",
-          controller: 'AboutCtrl',
+          templateUrl: "views/ranking.html",
+          controller: 'rankingCtrl',
           controllerAs: 'ctrl'
         }
-      },
-      params: {
-        home: true
       }
     });
 

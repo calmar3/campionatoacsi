@@ -5,7 +5,16 @@
 
     var ctrl = this;
 
-    console.log("NavbarCtrl");
+    ctrl.changeState = changeStateFn;
+
+    function changeStateFn(newstate,param) {
+      if (param === null)
+        $state.go(newstate);
+      else
+        $state.go(newstate,{clt:param});
+
+    }
+
   }];
 
   NavbarCtrl.$inject = ['$scope', '$rootScope', '$compile', '$state', '$stateParams'];
