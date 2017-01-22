@@ -10,7 +10,7 @@
   .rwd-table td {
     display: block; }
     .rwd-table td:first-child {
-      padding-top: .5em; }
+      /**padding-top: .5em; **/}
     .rwd-table td:last-child {
       padding-bottom: .5em; }
     .rwd-table td:before {
@@ -42,10 +42,10 @@
   .rwd-table tr {
     border-color: #46637f; }
   .rwd-table th, .rwd-table td {
-    margin: .5em 1em; }
+   /** margin: .5em 1em; **/}
     @media (min-width: 750px) {
       .rwd-table th, .rwd-table td {
-        padding: 1em !important; } }
+      /**  padding: 1em !important; **/} }
   .rwd-table th, .rwd-table td:before {
     /**color: #dd5;**/ 
   }

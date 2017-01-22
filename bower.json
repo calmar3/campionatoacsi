@@ -19,7 +19,7 @@
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
-  "moduleName": "workspaceApp",
+  "moduleName": "campionatoacsi",
   "overrides": {
     "bootstrap": {
       "main": [
@@ -27,6 +27,11 @@
         "dist/css/bootstrap.css",
         "dist/js/bootstrap.js"
       ]
-    }
+    },
+  "angular-i18n": {
+      "main":  [
+          "angular-locale_it-it.js"
+      ]
+  }
   }
 }
