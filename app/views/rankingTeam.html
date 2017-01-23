@@ -9,9 +9,9 @@
             <!-- /.panel-heading -->
             <div class="panel-body">
 
-                        <div class="table-responsive">
-                            <table class="table table-striped table-condensed">
-                                <thead>
+
+                <table class="table rwd-table table-sm table-condensed table-hover">
+                                                       <thead>
                                     <tr>
                                        <th >
                                             Posizione
@@ -27,24 +27,25 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr ng-repeat="team in ctrl.classificaTeam ">
-                                        <td style="text-align:center">
-                                            {{$index+1}}
-                                        </td>
-                                        <td >
-                                            {{team.nome_team}}
-                                        </td>
-                                        <td style="text-align:center">
-                                            {{team.cod_team}}
-                                        </td>
-                                        <td style="text-align:center">
-                                            {{team.tot_punti}}
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            <tr ng-repeat="team in ctrl.classificaTeam ">
+                                <td data-th="Posizione">
+                                    {{$index+1}}
+                                </td>
+                                <td data-th="Team">
+                                     {{team.nome_team}}
+                                </td>
+                                <td data-th="Codice Team">
+                                     {{team.cod_team}}
+                                </td>
+                                <td data-th="Punti">
+                                    {{team.tot_punti}}
+                                </td>
+                            </tr>
+                        </table>
+
+
+      
+
  
             </div>
         </div>
