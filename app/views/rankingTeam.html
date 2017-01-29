@@ -1,5 +1,5 @@
 <div class="row">
-   <div class="col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2">
+    <div class="col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <i class="fa fa-clock-o fa-fw">
@@ -8,45 +8,38 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-
-
                 <table class="table rwd-table table-sm table-condensed table-hover">
-                                                       <thead>
-                                    <tr>
-                                       <th >
-                                            Posizione
-                                        </th>
-                                        <th >
-                                            Team
-                                        </th>
-                                        <th style="text-align:center">
-                                            Cod. Team
-                                        </th>
-                                        <th style="text-align:center">
-                                            Punti
-                                        </th>
-                                    </tr>
-                                </thead>
-                            <tr ng-repeat="team in ctrl.classificaTeam ">
-                                <td data-th="Posizione">
-                                    {{$index+1}}
-                                </td>
-                                <td data-th="Team">
-                                     {{team.nome_team}}
-                                </td>
-                                <td data-th="Codice Team">
-                                     {{team.cod_team}}
-                                </td>
-                                <td data-th="Punti">
-                                    {{team.tot_punti}}
-                                </td>
-                            </tr>
-                        </table>
-
-
-      
-
- 
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">
+                                Posizione
+                            </th>
+                            <th style="text-align:left">
+                                Team
+                            </th>
+                            <th style="text-align:center">
+                                Cod. Team
+                            </th>
+                            <th style="text-align:center">
+                                Punti
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr ng-repeat="team in ctrl.classificaTeam ">
+                        <td data-th="Posizione" class="rwd-table-td-center">
+                            {{$index+1}}
+                        </td>
+                        <td data-th="Team" style="text-align: left;">
+                            {{team.nome_team}}
+                        </td>
+                        <td data-th="Codice Team">
+                            {{team.cod_team}}
+                        </td>
+                        <td data-th="Punti">
+                            {{team.tot_punti}}
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

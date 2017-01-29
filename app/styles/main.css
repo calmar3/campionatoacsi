@@ -1,95 +1,123 @@
 /* Space out content a bit */
+
 body {
     padding-bottom: 20px;
+    padding-top: 60px;
+    padding-bottom: 0;
 }
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+
+.header, .marketing, .footer {
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
 
 /* Custom page header */
+
 .header {
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+
+/* Make the masthead heading the same height as the navigation */
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
 }
+
+
+/* Custom page footer */
+
+.footer {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
 
 /* Customize container */
 
-.container-narrow > hr {
-  margin: 30px 0;
+.container-narrow>hr {
+    margin: 30px 0;
 }
+
 
 /* Main marketing message and sign up button */
+
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+    font-size: 21px;
+    padding: 14px 24px;
 }
+
 
 /* Supporting marketing content */
+
 .marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+    margin: 40px 0;
 }
 
+.marketing p+h4 {
+    margin-top: 28px;
+}
+
+
 /* Responsive: Portrait tablets and up */
+
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    /* Remove the padding we set earlier */
+    .header, .marketing, .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+    .dropdown-toggle {
+        height: 60px;
+    }
 }
 
 .nav>li.active>a {
-text-decoration: none;
-background-color: #eee;
+    text-decoration: none;
+    background-color: #eee;
 }
 
 .navbar {
-  margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 0;
 }
-.navbar-brand > img {
+
+.navbar-brand>img {
     display: block;
     max-height: 45px !important;
 }
 
 @media (max-width: 900px) {
-  .navbar-brand > img {
-    max-height: 40px !important;
-}
+    .navbar-brand>img {
+        max-height: 40px !important;
+    }
 }
 
 .navbar-brand {
@@ -97,10 +125,34 @@ background-color: #eee;
 }
 
 i.fa-check {
-  color: #1AA73F;
+    color: #1AA73F;
 }
 
 i.fa-times {
-  color: #D50036;
+    color: #D50036;
 }
 
+#page-wrapper {
+    margin: 0px !important;
+    padding: 25px !important;
+    background-image: url('../images/wallpaper_camp_acsi.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+div.panel-elenco-fix-height-atleti {
+    height: 75vh !important;
+    overflow-y: scroll !important;
+}
+
+@media screen and (min-width: 768px) {
+    div.panel-elenco-fix-height-piazzamenti {
+        height: 75vh !important;
+        overflow-y: scroll !important;
+    }
+}
+
+.panel {
+    /* panel background trasparente */
+    background-color: rgba(255, 255, 255, 0.9);
+}

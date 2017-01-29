@@ -9,19 +9,16 @@
                     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
                     <!-- build:css(.) styles/vendor.css -->
                     <!-- bower:css -->
-                    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-                    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+                    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+                    <link href="bower_components/components-font-awesome/css/font-awesome.css" rel="stylesheet"/>
                     <!-- endbower -->
                     <!-- endbuild -->
                     <!-- build:css(.tmp) styles/main.css -->
-                    <link href="styles/main.css" rel="stylesheet">
-                        <link href="styles/table_responsive.css" rel="stylesheet">
-                            <link href="styles/sb-admin-2.css" rel="stylesheet">
-                                    <!-- endbuild -->
-                          
-                            </link>
-                        </link>
-                    </link>
+                    <link href="styles/main.css" rel="stylesheet"/>
+                    <link href="styles/table_responsive.css" rel="stylesheet"/>
+                    <link href="styles/sb-admin-2.css" rel="stylesheet"/>
+                    <link href="styles/footer.css" rel="stylesheet"/>
+                    <!-- endbuild -->
                 </meta>
             </meta>
         </meta>
@@ -56,7 +53,7 @@
                         </li>
                         <li class="dropdown">
                             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="" role="button">
-                                Granfondo
+                                Classifiche Granfondo
                                 <span class="caret">
                                 </span>
                             </a>
@@ -66,6 +63,7 @@
                                         Atleti
                                     </a>
                                 </li>
+                                <li class="divider"></li>
                                 <li>
                                     <a href="" ng-click="ctrl.changeState('granfondo','societa')">
                                         Team
@@ -75,7 +73,7 @@
                         </li>
                         <li class="dropdown">
                             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="" role="button">
-                                Mediofondo
+                                Classifiche Mediofondo
                                 <span class="caret">
                                 </span>
                             </a>
@@ -85,6 +83,7 @@
                                         Atleti
                                     </a>
                                 </li>
+                                <li class="divider"></li>
                                 <li>
                                     <a href="" ng-click="ctrl.changeState('mediofondo','societa')">
                                         Team
@@ -101,18 +100,25 @@
             </div>
             <!--/.container-fluid -->
         </nav>
-        <div id="page-wrapper" style="min-height: 561px; margin:0px; padding: 25px;">
+        <div id="page-wrapper">
             <div ui-view="content">
             </div>
         </div>
         <div class="footer">
             <div class="container">
-                <p>
-                    Antonio Schiazza
-                    <br>
-                        Marco Calzetta
-                    </br>
-                </p>
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 col-xs-5">
+                        <span aria-hidden="true" class="glyphicon glyphicon-wrench">
+                        </span>
+                        Credits
+                            A. Schiazza | M. Calzetta
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-xs-7">
+                        <span aria-hidden="true" class="glyphicon glyphicon-info-sign">
+                        </span>
+                        Info e segnalazioni: antonio.schiazza@gmail.com
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -129,17 +135,28 @@
         </script>
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="bower_components/angular-touch/angular-touch.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="bower_components/angular-i18n/angular-locale_it-it.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js">
+        </script>
+        <script src="bower_components/angular/angular.js">
+        </script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js">
+        </script>
+        <script src="bower_components/angular-animate/angular-animate.js">
+        </script>
+        <script src="bower_components/angular-cookies/angular-cookies.js">
+        </script>
+        <script src="bower_components/angular-resource/angular-resource.js">
+        </script>
+        <script src="bower_components/angular-route/angular-route.js">
+        </script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js">
+        </script>
+        <script src="bower_components/angular-touch/angular-touch.js">
+        </script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js">
+        </script>
+        <script src="bower_components/angular-i18n/angular-locale_it-it.js">
+        </script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
