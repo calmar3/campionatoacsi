@@ -159,3 +159,10 @@ div.panel-elenco-fix-height-atleti {
     /* panel background trasparente */
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+
+table.cursor-pointer tr {
+    cursor: pointer;
+}
+
+
