@@ -38,6 +38,19 @@
       params: {
         home: true
       }
+    }).state('calendario', {
+      parent: 'site',
+      url: '/calendario',
+      data: {
+        roles: []
+      },
+      views: {
+        'content@': {
+          templateUrl: "views/calendario.html",
+          controller: 'CalendarioCtrl',
+          controllerAs: 'ctrl'
+        }
+      }
     }).state('mediofondo', {
       parent: 'site',
       url: '/mediofondo',

@@ -4,7 +4,7 @@
 
     function loadFactory($http) {
         var dataFactory = {};
-        dataFactory.data = {};
+        dataFactory.data = { calendario:[] , classifiche:[]};
         dataFactory.load = loadFn;
         dataFactory.getCalendario = getCalendarioFn;
         dataFactory.getClassifiche = getClassificheFn;

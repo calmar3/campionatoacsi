@@ -9,8 +9,8 @@
                     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
                     <!-- build:css(.) styles/vendor.css -->
                     <!-- bower:css -->
-                    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
-                    <link href="bower_components/components-font-awesome/css/font-awesome.css" rel="stylesheet"/>
+                    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+                    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
                     <!-- endbower -->
                     <!-- endbuild -->
                     <!-- build:css(.tmp) styles/main.css -->
@@ -48,32 +48,51 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a class="uppercase" href="" ng-click="ctrl.changeState('home')">
+                                Avvisi
+                            </a>
+                        </li>
+                        <li>
+                            <a class="uppercase" href="" ng-click="ctrl.changeState('calendario')">
                                 Calendario
                             </a>
                         </li>
                         <li class="dropdown">
                             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="" role="button">
-                                Classifiche Granfondo
+                                Classifiche
                                 <span class="caret">
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
+                                 <li class="dropdown-header">Granfondo</li>
                                 <li>
                                     <a href="" ng-click="ctrl.changeState('granfondo','categorie')">
                                         Atleti
                                     </a>
                                 </li>
-                                <li class="divider"></li>
+                               
                                 <li>
                                     <a href="" ng-click="ctrl.changeState('granfondo','societa')">
                                         Team
                                     </a>
                                 </li>
+                                 <li class="divider"></li>
+                                                                  <li class="dropdown-header">Mediofondo</li>
+                                <li>
+                                    <a href="" ng-click="ctrl.changeState('mediofondo','categorie')">
+                                        Atleti
+                                    </a>
+                                </li>
+                               
+                                <li>
+                                    <a href="" ng-click="ctrl.changeState('mediofondo','societa')">
+                                        Team
+                                    </a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <!--<li class="dropdown">
                             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="" role="button">
-                                Classifiche Mediofondo
+                                Mediofondo
                                 <span class="caret">
                                 </span>
                             </a>
@@ -90,7 +109,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>-->
                     </ul>
                     <p class="hidden-sm hidden-xs lead navbar-left navbar-text titolo-navbar">
                         Campionato Nazionale GF-MF
@@ -135,54 +154,42 @@
         </script>
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js">
-        </script>
-        <script src="bower_components/angular/angular.js">
-        </script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js">
-        </script>
-        <script src="bower_components/angular-animate/angular-animate.js">
-        </script>
-        <script src="bower_components/angular-cookies/angular-cookies.js">
-        </script>
-        <script src="bower_components/angular-resource/angular-resource.js">
-        </script>
-        <script src="bower_components/angular-route/angular-route.js">
-        </script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js">
-        </script>
-        <script src="bower_components/angular-touch/angular-touch.js">
-        </script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.js">
-        </script>
-        <script src="bower_components/angular-i18n/angular-locale_it-it.js">
-        </script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-i18n/angular-locale_it-it.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <!-- include: "type": "js", "files": ["scripts/modules/*.js"] -->
-        <script src="/scripts/modules/app.js">
-        </script>
-        <script src="/scripts/modules/route.js">
-        </script>
+        <script src="/scripts/modules/app.js"></script>
+        <script src="/scripts/modules/route.js"></script>
         <!-- /include -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/controllers.js -->
         <!-- include: "type": "js", "files": ["scripts/controllers/*.js"] -->
-        <script src="/scripts/controllers/rankingAtletiController.js">
-        </script>
-        <script src="/scripts/controllers/rankingTeamController.js">
-        </script>
-        <script src="/scripts/controllers/mainController.js">
-        </script>
-        <script src="/scripts/controllers/navbarController.js">
-        </script>
+        <script src="/scripts/controllers/rankingAtletiController.js"></script>
+        <script src="/scripts/controllers/rankingTeamController.js"></script>
+        <script src="/scripts/controllers/mainController.js"></script>
+        <script src="/scripts/controllers/navbarController.js"></script>
+        <script src="/scripts/controllers/calendarioController.js"></script>
         <!-- /include -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/factories.js -->
         <!-- include: "type": "js", "files": ["scripts/factories/*.js"] -->
-        <script src="/scripts/factories/loadFactory.js">
-        </script>
+        <script src="/scripts/factories/loadFactory.js"></script>
+        <!-- /include -->
+        <!-- endbuild -->
+                <!-- build:js({.tmp,app}) scripts/filters.js -->
+        <!-- include: "type": "js", "files": ["scripts/filters/*.js"] -->
+        <script src="/scripts/filters/filterCalendario.js"></script>
         <!-- /include -->
         <!-- endbuild -->
     </body>
