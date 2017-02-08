@@ -9,6 +9,7 @@
       return loadFactory.getCalendario();
     }, function (res) {
       ctrl.calendario = res;
+      ctrl.dataAggiornamento = loadFactory.getDataAggiornamento();
     });
     
   }];

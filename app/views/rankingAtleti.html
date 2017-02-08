@@ -1,29 +1,32 @@
 <div class="row">
     <div class="col-lg-8 col-md-8 col-xs-12">
-        <div class="panel panel-primary panel-elenco-fix-height-atleti" >
+        <div class="panel panel-primary panel-elenco-fix-height-atleti">
             <div class="panel-heading">
-                <i class="fa fa-clock-o fa-fw">
-                </i>
-                CLASSIFICHE CAMPIONATO: {{ctrl.nomeCampionato | uppercase}}
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-xs-12 ">
+                        <i class="fa fa-clock-o fa-fw">
+                </i> CLASSIFICHE CAMPIONATO: {{ctrl.nomeCampionato | uppercase}}
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-12 ">
+                        <span class="pull-right">Ultimo aggiornamento: {{ctrl.dataAggiornamento | date:shortdate}}</span>
+                    </div>
+                </div>
+
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-            <div class="alert alert-info" ng-show="!ctrl.piazzamenti"> Clicca sul nominativo per vedere il dettaglio dei piazzamenti</div>
+                <div class="alert alert-info" ng-show="!ctrl.piazzamenti"> Clicca sul nominativo per vedere il dettaglio dei piazzamenti</div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
-                    <li 
-                        ng-class="{'active':ctrl.selectedTab===$index}" 
-                        ng-click="ctrl.selectTab($index)" 
-                        style="cursor:pointer"
-                        ng-repeat="categoria in ctrl.classifiche">
-                        <a data-toggle="tab" >
+                    <li ng-class="{'active':ctrl.selectedTab===$index}" ng-click="ctrl.selectTab($index)" style="cursor:pointer" ng-repeat="categoria in ctrl.classifiche">
+                        <a data-toggle="tab">
                             {{categoria.categoria}}
                         </a>
                     </li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div class="tab-pane active" >
+                    <div class="tab-pane active">
                         <div class="table-responsive">
                             <table class="table table-striped table-condensed table-hover cursor-pointer">
                                 <thead>
@@ -84,48 +87,46 @@
         </div>
     </div>
 
-        <div class="col-lg-4 col-md-4 col-xs-12" >
+    <div class="col-lg-4 col-md-4 col-xs-12">
         <div class="panel panel-primary panel-elenco-fix-height-piazzamenti" ng-show="ctrl.piazzamenti">
             <div class="panel-heading">
                 <i class="fa fa-clock-o fa-fw">
-                </i>
-                Dettaglio Piazzamenti: {{ctrl.piazzamenti.atleta}}
+                </i> Dettaglio Piazzamenti: {{ctrl.piazzamenti.atleta}}
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
 
-                        <div class="table-responsive">
-                            <table class="table table-striped table-condensed">
-                                <thead>
-                                    <tr>
-                                        <th >
-                                            Nome Prova
-                                        </th>
-                                        <th style="text-align:center">
-                                            Posizione
-                                        </th>
-                                        <th style="text-align:center">
-                                            Punti
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="piazzamento in ctrl.piazzamenti.gare " 
-                                        ng-class="{'danger':piazzamento.is_migliore===false}" >
-                                        <td >
-                                            {{piazzamento.nomeprova}}
-                                        </td>
-                                        <td style="text-align:center">
-                                            {{piazzamento.posizione}}
-                                        </td>
-                                        <td style="text-align:center">
-                                            {{piazzamento.punteggio}}
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
- 
+                <div class="table-responsive">
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Nome Prova
+                                </th>
+                                <th style="text-align:center">
+                                    Posizione
+                                </th>
+                                <th style="text-align:center">
+                                    Punti
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="piazzamento in ctrl.piazzamenti.gare " ng-class="{'danger':piazzamento.is_migliore===false}">
+                                <td>
+                                    {{piazzamento.nomeprova}}
+                                </td>
+                                <td style="text-align:center">
+                                    {{piazzamento.posizione}}
+                                </td>
+                                <td style="text-align:center">
+                                    {{piazzamento.punteggio}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>

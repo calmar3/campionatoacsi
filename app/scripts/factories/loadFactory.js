@@ -8,6 +8,7 @@
         dataFactory.load = loadFn;
         dataFactory.getCalendario = getCalendarioFn;
         dataFactory.getClassifiche = getClassificheFn;
+        dataFactory.getDataAggiornamento = getDataAggiornamentoFn;
         dataFactory.classifiche = {};
         dataFactory.setClassifiche = setClassificheFn;
 
@@ -15,6 +16,7 @@
             $http.get('https://dl.dropboxusercontent.com/u/9647434/source.json').then(function(response) {
               // console.log(data);
               dataFactory.data = response.data;
+              console.log(dataFactory.data)
             }).catch(function(data) {
               console.log(data);
               // show error popup
@@ -36,6 +38,10 @@
 
         function getClassificheFn() {
             return dataFactory.classifiche;
+        }
+
+        function getDataAggiornamentoFn(){
+            return dataFactory.data.ultimo_aggiornamento_dati;
         }
         return dataFactory;
     }

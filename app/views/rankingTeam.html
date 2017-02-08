@@ -2,9 +2,15 @@
     <div class="col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <i class="fa fa-clock-o fa-fw">
-                </i>
-                CLASSIFICA TEAM: {{ctrl.nomeCampionato | uppercase}}
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-xs-12 ">
+                        <i class="fa fa-clock-o fa-fw">
+                </i> CLASSIFICA TEAM: {{ctrl.nomeCampionato | uppercase}}
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-12 ">
+                        <span class="pull-right">Ultimo aggiornamento: {{ctrl.dataAggiornamento | date:shortdate}}</span>
+                    </div>
+                </div>
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">

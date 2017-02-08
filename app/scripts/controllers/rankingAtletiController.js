@@ -15,8 +15,10 @@
             }
 
             ctrl.campionato = loadFactory.getClassifiche();
+            ctrl.dataAggiornamento = loadFactory.getDataAggiornamento();
             ctrl.classifiche = ctrl.campionato.clas;
             ctrl.nomeCampionato = ctrl.campionato.nome;
+
         });
         // ctrl.campionato = loadFactory.getClassifiche();
         ctrl.selezionaPiazzamenti = selezionaPiazzamentiFn;

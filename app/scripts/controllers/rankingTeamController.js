@@ -12,6 +12,7 @@
                 loadFactory.setClassifiche(newstate, "societa");
             }
             ctrl.campionato = loadFactory.getClassifiche();
+            ctrl.dataAggiornamento = loadFactory.getDataAggiornamento();
             ctrl.classificaTeam = ctrl.campionato.clas;
             ctrl.nomeCampionato = ctrl.campionato.nome;
         });
