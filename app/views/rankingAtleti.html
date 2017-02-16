@@ -55,7 +55,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="atleta in ctrl.classifiche[ctrl.selectedTab].classifica " ng-click="ctrl.selezionaPiazzamenti($index)">
+                                    <tr ng-repeat="atleta in ctrl.classifiche[ctrl.selectedTab].classifica " ng-click="ctrl.selezionaPiazzamenti($index)" ng-class="{'success':atleta.vincitore}">
                                         <td style="text-align:center">
                                             {{$index+1}}
                                         </td>

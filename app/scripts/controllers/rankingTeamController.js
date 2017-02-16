@@ -13,6 +13,7 @@
             }
             ctrl.campionato = loadFactory.getClassifiche();
             ctrl.dataAggiornamento = loadFactory.getDataAggiornamento();
+            ctrl.fine_campionato = loadFactory.getFineCampionato();
             ctrl.classificaTeam = ctrl.campionato.clas;
             ctrl.nomeCampionato = ctrl.campionato.nome;
         });

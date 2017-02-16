@@ -11,19 +11,24 @@
         dataFactory.getDataAggiornamento = getDataAggiornamentoFn;
         dataFactory.classifiche = {};
         dataFactory.setClassifiche = setClassificheFn;
+        dataFactory.getFineCampionato = getFineCampionatoFn;
 
         function loadFn() {
             $http.get('https://dl.dropboxusercontent.com/u/9647434/source.json').then(function(response) {
-              // console.log(data);
               dataFactory.data = response.data;
-              console.log(dataFactory.data)
+              //console.log(dataFactory.data);
             }).catch(function(data) {
               console.log(data);
               // show error popup
               });
         }
+
         function getCalendarioFn() {
             return dataFactory.data.calendario;
+        }
+
+        function getFineCampionatoFn(){
+            return dataFactory.data.fine_campionato;
         }
 
         function setClassificheFn(campionato, tipo) {

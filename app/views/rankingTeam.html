@@ -31,7 +31,7 @@
                             </th>
                         </tr>
                     </thead>
-                    <tr ng-repeat="team in ctrl.classificaTeam ">
+                    <tr ng-repeat="team in ctrl.classificaTeam " ng-class="{'success': $index+1<=10 && ctrl.fine_campionato}">
                         <td data-th="Posizione" class="rwd-table-td-center">
                             {{$index+1}}
                         </td>
