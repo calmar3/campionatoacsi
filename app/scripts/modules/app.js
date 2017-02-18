@@ -1,3 +1,4 @@
+/**Definizione del modulo relativo all'applicazione e i componenti inclusi */
 'use strict';
 
 /**

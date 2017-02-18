@@ -19,7 +19,7 @@
   function routingConf($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
-
+    /**Main route - home */
     $stateProvider.state('site', {
       'abstract': true
     }).state('home', {
@@ -108,3 +108,5 @@
   }
 
 } ());
+
+/**definizione degli stati con associate le view, lo url, e i controller */

@@ -4,6 +4,9 @@
 
     function loadFactory($http) {
         var dataFactory = {};
+        /**
+         * proprietà e metodi accessibili dall'esterno
+         */
         dataFactory.data = { calendario:[] , classifiche:[]};
         dataFactory.load = loadFn;
         dataFactory.getCalendario = getCalendarioFn;
@@ -13,6 +16,10 @@
         dataFactory.setClassifiche = setClassificheFn;
         dataFactory.getFineCampionato = getFineCampionatoFn;
 
+        /**
+         * Chiamata al refresh dell'app ed all'avvio.
+         * Carica il file Json nella proprietà dataFactory.data
+         */
         function loadFn() {
             $http.get('https://dl.dropboxusercontent.com/u/9647434/source.json').then(function(response) {
               dataFactory.data = response.data;
@@ -23,14 +30,22 @@
               });
         }
 
+
+
         function getCalendarioFn() {
             return dataFactory.data.calendario;
         }
+
 
         function getFineCampionatoFn(){
             return dataFactory.data.fine_campionato;
         }
 
+
+        /**
+         * Campionato e tipo sono riferiti a granfondo/mediofondo - societa/atleti
+         * quindi la proprietà classifiche della Factory viene impostata con la giusta classifica
+         */
         function setClassificheFn(campionato, tipo) {
             for (var i = 0; i < dataFactory.data.classifiche.length; i++) {
                 if (dataFactory.data.classifiche[i].campionato === campionato) {
@@ -48,6 +63,7 @@
         function getDataAggiornamentoFn(){
             return dataFactory.data.ultimo_aggiornamento_dati;
         }
+
         return dataFactory;
     }
 

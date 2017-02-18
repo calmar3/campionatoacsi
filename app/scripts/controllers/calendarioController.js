@@ -5,9 +5,11 @@
 
     var ctrl = this;
 
+    /**watch per attendere cambiamenti del calendario nella factory */
     $scope.$watch(function () {
       return loadFactory.getCalendario();
     }, function (res) {
+      /**carico i dati utili alla view */
       ctrl.calendario = res;
       ctrl.dataAggiornamento = loadFactory.getDataAggiornamento();
     });

@@ -5,6 +5,9 @@
 
     var ctrl = this;
 
+    /**empty main controller
+     * le funzionalità aggiungibili andranno utilizzate nella view delle newsletter
+     */
     
   }];
 
