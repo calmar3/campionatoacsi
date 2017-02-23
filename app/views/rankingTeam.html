@@ -14,8 +14,10 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-                <table class="table rwd-table table-sm table-condensed table-hover">
-                    <thead>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-condensed table-hover cursor-pointer">
+                        <thead>
                         <tr>
                             <th style="text-align:center">
                                 Posizione
@@ -30,22 +32,25 @@
                                 Punti
                             </th>
                         </tr>
-                    </thead>
-                    <tr ng-repeat="team in ctrl.classificaTeam " ng-class="{'success': $index+1<=10 && ctrl.fine_campionato}">
-                        <td data-th="Posizione" class="rwd-table-td-center">
-                            {{$index+1}}
-                        </td>
-                        <td data-th="Team" style="text-align: left;">
-                            {{team.nome_team}}
-                        </td>
-                        <td data-th="Codice Team">
-                            {{team.cod_team}}
-                        </td>
-                        <td data-th="Punti">
-                            {{team.tot_punti}}
-                        </td>
-                    </tr>
-                </table>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="team in ctrl.classificaTeam " ng-class="{'success': $index+1<=10 && ctrl.fine_campionato}">
+                            <td  style="text-align: center;" class="rwd-table-td-center">
+                                {{$index+1}}
+                            </td>
+                            <td  style="text-align: left;">
+                                {{team.nome_team}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{team.cod_team}}
+                            </td>
+                            <td style="text-align: center;">
+                                {{team.tot_punti}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
