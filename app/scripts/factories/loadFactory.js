@@ -21,7 +21,7 @@
          * Carica il file Json nella proprietà dataFactory.data
          */
         function loadFn() {
-            $http.get('https://dl.dropboxusercontent.com/u/9647434/source.json').then(function(response) {
+            $http.get('data/source.json').then(function(response) {
               dataFactory.data = response.data;
               //console.log(dataFactory.data);
             }).catch(function(data) {

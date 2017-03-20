@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Filtro per le date
  */
