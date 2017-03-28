@@ -28,6 +28,9 @@
                         Data
                     </th>
                     <th>
+                        Campionato
+                    </th>
+                    <th>
                         Iscritti
                     </th>
                     <th>
@@ -42,9 +45,6 @@
                     <th>
                         Pioggia
                     </th>
-                    <th>
-                        Perc. Unico
-                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -55,13 +55,16 @@
                     <td >
                         {{gara.data | date:'dd MMMM yyyy'}}
                     </td>
-                    <td >
+                    <td style="text-align: center;">
+                        {{gara.campionato}}
+                    </td>
+                    <td style="text-align: center;">
                         {{gara.iscritti | filterCalendario }}
                     </td>
-                    <td >
+                    <td style="text-align: center;">
                         {{gara.partenti | filterCalendario }}
                     </td>
-                    <td >
+                    <td style="text-align: center;">
                         {{gara.arrivati | filterCalendario }}
                     </td>
                     <td ng-if="gara.avviso" colspan="3" style="text-align: center;"><span class="text-danger" >{{gara.avviso}}</span></td>
@@ -71,10 +74,6 @@
                     </td>
                     <td  ng-if="!gara.avviso" style="text-align: center;">
                         <i ng-class="{'fa fa-check': gara.pioggia ,'fa fa-times': !gara.pioggia}">
-                        </i>
-                    </td>
-                    <td ng-if="!gara.avviso" style="text-align: center;">
-                        <i ng-class="{'fa fa-check': gara.percorso_unico ,'fa fa-times': !gara.percorso_unico }">
                         </i>
                     </td>
                 </tr>
