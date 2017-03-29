@@ -168,3 +168,13 @@ table.cursor-pointer tr {
 .navbar-nav > li > a {
     line-height: 30px !important;
 }
+
+.sample-show-hide {
+  -webkit-transition:all 0.5s ease;
+  -moz-transition:all 0.5s ease;
+  -o-transition:all 0.5s ease;
+  transition:all 0.5s ease;
+}
+.sample-show-hide.ng-hide {
+  opacity: 0;
+}

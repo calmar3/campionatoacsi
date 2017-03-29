@@ -15,7 +15,7 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-                <div class="alert alert-info" ng-show="!ctrl.piazzamenti"> Clicca sul nominativo per vedere il dettaglio dei piazzamenti</div>
+                <div class="alert alert-info sample-show-hide" ng-show="!ctrl.piazzamenti"> Clicca sul nominativo per vedere il dettaglio dei piazzamenti</div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                     <li ng-class="{'active':ctrl.selectedTab===$index}" ng-click="ctrl.selectTab($index)" style="cursor:pointer" ng-repeat="categoria in ctrl.classifiche">
