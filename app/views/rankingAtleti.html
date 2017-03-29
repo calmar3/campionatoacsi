@@ -96,8 +96,7 @@
             <!-- /.panel-heading -->
             <div class="panel-body">
 
-                <div class="table-responsive">
-                    <table class="table table-striped table-condensed">
+                    <table class="table table-striped table-condensed rwd-table">
                         <thead>
                             <tr>
                                 <th>
@@ -113,19 +112,18 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="piazzamento in ctrl.piazzamenti.gare " ng-class="{'danger':piazzamento.is_migliore===false}">
-                                <td>
+                                <td data-th="Prova">
                                     {{piazzamento.nomeprova}}
                                 </td>
-                                <td style="text-align:center">
+                                <td data-th="Pos.">
                                     {{piazzamento.posizione}}
                                 </td>
-                                <td style="text-align:center">
+                                <td data-th="Punti">
                                     {{piazzamento.punteggio}}
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
 
             </div>
         </div>

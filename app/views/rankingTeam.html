@@ -15,8 +15,7 @@
             <!-- /.panel-heading -->
             <div class="panel-body">
 
-                <div class="table-responsive">
-                    <table class="table table-striped table-condensed table-hover cursor-pointer">
+                    <table class="table table-striped table-condensed table-hover cursor-pointer rwd-table">
                         <thead>
                         <tr>
                             <th style="text-align:center">
@@ -35,22 +34,21 @@
                         </thead>
                         <tbody>
                         <tr ng-repeat="team in ctrl.classificaTeam " ng-class="{'success': $index+1<=10 && ctrl.fine_campionato}">
-                            <td  style="text-align: center;" class="rwd-table-td-center">
+                            <td class="rwd-table-td-center" data-th="Pos.">
                                 {{$index+1}}
                             </td>
-                            <td  style="text-align: left;">
+                            <td data-th="Team" style="text-align: left;">
                                 {{team.nome_team}}
                             </td>
-                            <td style="text-align: center;">
+                            <td data-th="Cod. Team">
                                 {{team.cod_team}}
                             </td>
-                            <td style="text-align: center;">
+                            <td data-th="Punti">
                                 {{team.tot_punti}}
                             </td>
                         </tr>
                         </tbody>
                     </table>
-                </div>
             </div>
         </div>
     </div>

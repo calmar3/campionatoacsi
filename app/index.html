@@ -24,10 +24,10 @@
     </head>
     <body ng-app="campionatoAcsi" ng-controller="NavbarCtrl as ctrl" ng-init="ctrl.init()">
         <!-- Add your site or application content here -->
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button class="navbar-toggle collapsed" data-target="#navbar3" data-toggle="collapse" type="button">
+                    <button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="sr-only">
                             Toggle navigation
                         </span>
@@ -38,7 +38,7 @@
                         <span class="icon-bar">
                         </span>
                     </button>
-                    <a class="navbar-brand" href="" ng-click="ctrl.changeState('home')" data-target="#navbar3" data-toggle="collapse">
+                    <a class="navbar-brand" href="" ng-click="ctrl.changeState('home')">
                         <img alt="ACSI Ciclismo" src="images/logo_ciclismo_web.png">
                         </img>
                     </a>
@@ -46,12 +46,12 @@
                 <div class="navbar-collapse collapse" id="navbar3">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="uppercase" href="" ng-click="ctrl.changeState('home')" data-target="#navbar3" data-toggle="collapse">
+                            <a class="uppercase" href="" ng-click="ctrl.changeState('home')" data-target=".navbar-collapse.in" data-toggle="collapse">
                                 AVVISI
                             </a>
                         </li>
                         <li>
-                            <a class="uppercase" href="" ng-click="ctrl.changeState('calendario')" data-target="#navbar3" data-toggle="collapse">
+                            <a class="uppercase" href="" ng-click="ctrl.changeState('calendario')" data-target=".navbar-collapse.in" data-toggle="collapse">
                                 CALENDARIO
                             </a>
                         </li>
@@ -64,26 +64,26 @@
                             <ul class="dropdown-menu">
                                  <li class="dropdown-header">Granfondo</li>
                                 <li>
-                                    <a href="" ng-click="ctrl.changeState('granfondo','categorie')" data-target="#navbar3" data-toggle="collapse">
+                                    <a href="" ng-click="ctrl.changeState('granfondo','categorie')" data-target=".navbar-collapse.in" data-toggle="collapse">
                                         Atleti
                                     </a>
                                 </li>
                                
                                 <li>
-                                    <a href="" ng-click="ctrl.changeState('granfondo','societa')" data-target="#navbar3" data-toggle="collapse">
+                                    <a href="" ng-click="ctrl.changeState('granfondo','societa')" data-target=".navbar-collapse.in" data-toggle="collapse">
                                         Team
                                     </a>
                                 </li>
                                  <li class="divider"></li>
                                     <li class="dropdown-header">Mediofondo</li>
                                 <li>
-                                    <a href="" ng-click="ctrl.changeState('mediofondo','categorie')" data-target="#navbar3" data-toggle="collapse">
+                                    <a href="" ng-click="ctrl.changeState('mediofondo','categorie')" data-target=".navbar-collapse.in" data-toggle="collapse">
                                         Atleti
                                     </a>
                                 </li>
                                
                                 <li>
-                                    <a href="" ng-click="ctrl.changeState('mediofondo','societa')" data-target="#navbar3" data-toggle="collapse">
+                                    <a href="" ng-click="ctrl.changeState('mediofondo','societa')" data-target=".navbar-collapse.in" data-toggle="collapse">
                                         Team
                                     </a>
                                 </li>
