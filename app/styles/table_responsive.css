@@ -36,13 +36,7 @@
     .rwd-table td:before {
         display: none;
     }
-}
 
-.rwd-table th, .rwd-table td {
-    text-align: left;
-}
-
-@media (min-width: 750px) {
     .rwd-table th, .rwd-table td {
         display: table-cell;
         padding: .25em .5em;
@@ -62,6 +56,10 @@
     .rwd-table .rwd-table-td-center {
         text-align: center !important;
     }
+}
+
+.rwd-table th, .rwd-table td {
+    text-align: left;
 }
 
 .rwd-table {
