@@ -21,7 +21,9 @@
          * Carica il file Json nella proprietà dataFactory.data
          */
         function loadFn() {
-            $http.get('data/source.json?a=a',{
+            var urlDataSource = 'data/source.json';
+            var tempUrl = urlDataSource + '?hash_id=' + Math.random();
+            $http.get(tempUrl,{
                 cache: false
             }).then(function(response) {
               dataFactory.data = response.data;
