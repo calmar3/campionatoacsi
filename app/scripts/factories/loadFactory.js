@@ -22,8 +22,7 @@
          */
         function loadFn() {
             var urlDataSource = 'data/source.json';
-            var tempUrl = urlDataSource + '?hash_id=' + Math.random();
-            $http.get(tempUrl,{
+            $http.get(urlDataSource,{
                 cache: false
             }).then(function(response) {
               dataFactory.data = response.data;
