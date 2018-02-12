@@ -54,7 +54,14 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody ng-show="ctrl.classifiche[ctrl.selectedTab].classifica.length==0">
+                                    <tr>
+                                        <td colspan="8" align="center">
+                                            Nessun atleta presente per questa categoria 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody ng-show="!ctrl.classifiche[ctrl.selectedTab].classifica.length==0">
                                     <tr ng-repeat="atleta in ctrl.classifiche[ctrl.selectedTab].classifica " 
                                         ng-click="ctrl.selezionaPiazzamenti($index)" 
                                         ng-class="{'success':atleta.premiato}">

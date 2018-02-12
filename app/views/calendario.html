@@ -6,7 +6,7 @@
                     <div class="col-lg-8 col-md-8 col-xs-12 ">
                 <i class="fa fa-calendar fa-fw" style="margin-right:5px;">
                 </i>
-                Calendario CAMPIONATO NAZIONALE GRANFONDO E MEDIOFONDO 2017
+                Calendario CAMPIONATO NAZIONALE GRANFONDO E MEDIOFONDO 2018
                 </div>
                <div class="col-lg-4 col-md-4 col-xs-12 ">
                 <span class="pull-right">Ultimo aggiornamento: {{ctrl.dataAggiornamento | date:shortdate}}</span>
@@ -26,6 +26,9 @@
                     </th>
                     <th>
                         Data
+                    </th>
+                    <th>
+                        Provincia
                     </th>
                     <th>
                         Iscritti
@@ -51,6 +54,9 @@
                     </td>
                     <td>
                         {{gara.data | date:'dd MMMM yyyy'}}
+                    </td>
+                    <td style="text-align: center;">
+                        {{gara.provincia}}
                     </td>
                     <td style="text-align: center;">
                         {{gara.iscritti | filterCalendario }}

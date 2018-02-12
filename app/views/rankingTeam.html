@@ -35,7 +35,14 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody ng-show="ctrl.classificaTeam.length==0">
+                                    <tr>
+                                        <td colspan="8" align="center">
+                                            Nessun team presente
+                                        </td>
+                                    </tr>
+                                </tbody>
+                        <tbody ng-show="!ctrl.classificaTeam.length==0">
                             <tr ng-class="{'success': $index+1<=10 && ctrl.fine_campionato}" ng-repeat="team in ctrl.classificaTeam ">
                                 <td style="text-align:center">
                                     {{$index+1}}
