@@ -19,3 +19,5 @@ app/data/source.json
 .DS_Store
 
 .DS_Store
+
+/package-lock.json
