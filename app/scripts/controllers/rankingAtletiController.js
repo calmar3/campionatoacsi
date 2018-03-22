@@ -7,6 +7,14 @@
         ctrl.selectedTab = 0;
         ctrl.selectTab = selectTabFn;
         ctrl.selezionaPiazzamenti = selezionaPiazzamentiFn;
+        ctrl.tooltipText = tooltipTextFn;
+
+        function tooltipTextFn(piazzamento) {
+            if (piazzamento.is_migliore === false)
+                return "Prova Scartata";
+            if (piazzamento.is_maggiorato === true)
+                return "Punteggio Maggiorato";
+        }
 
         /** watch per attendere che loadFactory.data sia caricata dal valore di ritorno dell'API.*/
         $scope.$watch(function () {

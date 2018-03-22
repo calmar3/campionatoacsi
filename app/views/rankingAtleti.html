@@ -121,8 +121,10 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="piazzamento in ctrl.piazzamenti.gare" 
-                                ng-class="{'danger':piazzamento.is_migliore===false}"
-                                uib-tooltip="Prova scartata" tooltip-trigger="'mouseenter'" tooltip-enable="piazzamento.is_migliore===false"
+                                ng-class="{'danger':piazzamento.is_migliore===false, 'warning':piazzamento.is_maggiorato===true && piazzamento.is_migliore===true }"
+                                uib-tooltip="{{ctrl.tooltipText(piazzamento)}}" 
+                                tooltip-trigger="'mouseenter'" 
+                                tooltip-enable="piazzamento.is_migliore===false || piazzamento.is_maggiorato===true"
                                 >
                                 <td>
                                     {{piazzamento.nomeprova}}
