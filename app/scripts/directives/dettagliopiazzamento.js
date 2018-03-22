@@ -11,25 +11,28 @@ angular.module('campionatoAcsi')
 
   	var controllerFn = ['$scope', function ($scope) {
 
-  		function tooltipTextFn(piazzamento) {
-            if (piazzamento.is_migliore === false)
+  		function tooltipTextFn(p) {
+            if (p.is_migliore === false) {
                 return "Prova scartata";
-            if (piazzamento.is_maggiorato === true)
+            }
+            if (p.is_maggiorato === true) {
                 return "Punteggio maggiorato";
+            }
+            return "";
         }
         
-        function tooltipEnablerFn(piazzamento) {
-          	return piazzamento.is_migliore===false || piazzamento.is_maggiorato===true;
+        function tooltipEnablerFn(p) {
+          	return p.is_migliore===false || p.is_maggiorato===true;
         }
 
-        function cssClassFn(piazzamento) {
-          	if(piazzamento.is_migliore === false) {
-				return 'danger';
-			}
-          	if(piazzamento.is_maggiorato === true) {
-				return 'warning';
-			}
-			return '';
+        function cssClassFn(p) {
+        	if(p.is_migliore === false) {
+    			return 'danger';
+    		}
+        	if(p.is_maggiorato === true) {
+    			return 'warning';
+        	}
+  			return '';
         }
 
         function init() {
