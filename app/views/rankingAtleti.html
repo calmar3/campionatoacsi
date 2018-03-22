@@ -120,22 +120,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="piazzamento in ctrl.piazzamenti.gare" 
-                                ng-class="{'danger':piazzamento.is_migliore===false, 'warning':piazzamento.is_maggiorato===true && piazzamento.is_migliore===true }"
-                                uib-tooltip="{{ctrl.tooltipText(piazzamento)}}" 
-                                tooltip-trigger="'mouseenter'" 
-                                tooltip-enable="piazzamento.is_migliore===false || piazzamento.is_maggiorato===true"
-                                >
-                                <td>
-                                    {{piazzamento.nomeprova}}
-                                </td>
-                                <td style="text-align:center">
-                                    {{piazzamento.posizione}}
-                                </td>
-                                <td style="text-align:center">
-                                    {{piazzamento.punteggio}}
-                                </td>
-                            </tr>
+                            <tr dettaglio-piazzamento ng-repeat="p in ctrl.piazzamenti.gare" piazzamento="p"></tr>
                         </tbody>
                     </table>
                     </div>
