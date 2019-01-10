@@ -46,7 +46,7 @@ angular.module('campionatoAcsi')
     }];
 
     return {
-    	templateUrl: 'scripts/directives/dettagliopiazzamento.html',
+    	templateUrl: 'views/dettagliopiazzamento.html',
     	replace: true,
     	restrict: 'A',
     	scope: {
